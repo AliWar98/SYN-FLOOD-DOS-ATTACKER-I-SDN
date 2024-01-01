@@ -16,7 +16,7 @@ s1 = net.addSwitch('s1')
 c0 = net.addController('c0', ip='127.0.0.1', port=6653)  # Skapa en controller 'c0' med IP '127.0.0.1' och port '6653'
 
 # Konfigurera länkalternativ (bandbredd)
-link_opts = {'bw': 5} # Skapa en dictionary link_opts med länkalternativ, här är bandbredden satt till 5
+link_opts = {'bw': 10} # Skapa en dictionary link_opts med länkalternativ, här är bandbredden satt till 5
 
 # Lägg till länkar mellan host och switch med konfigurerade länkalternativ
 net.addLink(h1, s1, cls=TCLink, **link_opts)
