@@ -9,9 +9,9 @@ net = Mininet(host=CPULimitedHost)
 
 # Skapa host, switch och controller
 # Ange CPULimitedHost och sätt CPU-begränsningen till 0.1 (10%)
-h1 = net.addHost('h1', cpu=0.1)
-h2 = net.addHost('h2', cpu=0.1)
-h3 = net.addHost('h3', cpu=0.1)
+h1 = net.addHost('h1', cpu=1.0)
+h2 = net.addHost('h2', cpu=1.0)
+h3 = net.addHost('h3', cpu=1.0)
 s1 = net.addSwitch('s1')
 c0 = net.addController('c0', ip='127.0.0.1', port=6653)  # Skapa en controller 'c0' med IP '127.0.0.1' och port '6653'
 
@@ -25,7 +25,8 @@ net.addLink(h3, s1, cls=TCLink, **link_opts)
 
 # Starta nätverket
 net.start()
-
+for host in net.hosts:
+     host.cmd('cpulimit --limit=10 --background')
 # Starta CLI (Command Line Interface) för att interagera med nätverket
 CLI(net)
 
