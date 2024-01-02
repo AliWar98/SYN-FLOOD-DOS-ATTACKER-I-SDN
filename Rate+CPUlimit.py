@@ -23,10 +23,11 @@ net.addLink(h1, s1, cls=TCLink, **link_opts)
 net.addLink(h2, s1, cls=TCLink, **link_opts)
 net.addLink(h3, s1, cls=TCLink, **link_opts)
 
-# Starta nätverket
-net.start()
+# Apply cpulimit to limit all processes on each host
 for host in net.hosts:
      host.cmd('cpulimit --limit=10 --background')
+# Starta nätverket
+net.start()
 # Starta CLI (Command Line Interface) för att interagera med nätverket
 CLI(net)
 
