@@ -3,13 +3,20 @@ Detta reposetory är en guide till installationen av mininet och dokumentation a
 
 ## Installation av mininet i UBUNTU
 
-först insatalera vi mininet genom sudo `apt-get install mininet`
-sedan ladda vi ner github `sudo apt-get install git`
-vi clona mininet github `git clone git://github.com/mininet/mininet`
-i mininet hitta `git tag`
-kopiera tag
-skapa en ny gren `git checkout -b "tag"`
-ladda ned python och andra verktyg för mininet `mininet/util/install.sh -a`
+först insatalera vi mininet genom sudo `apt-get install mininet`.
+
+sedan ladda vi ner github `sudo apt-get install git`.
+
+vi clona mininet github `git clone git://github.com/mininet/mininet`.
+
+i mininet hitta `git tag`.
+
+kopiera tag.
+
+skapa en ny gren `git checkout -b "tag"`.
+
+ladda ned python och andra verktyg för mininet `mininet/util/install.sh -a`.
+
 lägg till din linux distributiuon, den finns på topen när du ladar ner `mininet/util/install.sh -a "din linux distributiuon"`
 
 ## Starta mininet
