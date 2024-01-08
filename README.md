@@ -31,11 +31,11 @@ Ladda ned Hping3 med `sudo apt-get install hping3`
 
 ## Hping3 attack-kommandon
 
-SYN-flood attack `hping3 "target ip-address" --syn --flood -a 10.0.0.13`.
+SYN-flood attack `hping3 "target ip-address" --syn --flood -a "spoofed-adress"`.
 
-ACK-flood attack `hping3 "target ip-address" --ack --flood -a 10.0.0.13`
+ACK-flood attack `hping3 "target ip-address" --ack --flood -a "spoofed-adress"`
 
-SYN-ACK-flood attack `hping3 "target ip-address" --syn --ack --flood -a 10.0.0.13`
+SYN-ACK-flood attack `hping3 "target ip-address" --syn --ack --flood -a "spoofed-adress"`
 
 ## SSH daemon
 För att kunna köra ssh till Mininet skriver du `sudo ~/mininet/examples/sshd.py`.
