@@ -3,7 +3,7 @@ Detta reposetory är en guide till installationen av mininet och dokumentation a
 
 ## Installation av mininet i UBUNTU
 
-Först insatalera vi mininet genom sudo `apt-get install mininet`.
+Först installera vi mininet genom sudo `apt-get install mininet`.
 
 Sedan ladda vi ner github `sudo apt-get install git`.
 
