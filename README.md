@@ -38,6 +38,6 @@ ACK-flood attack `hping3 "host2 ip-address" --ack --flood -a 10.0.0.13`
 SYN-ACK-flood attack `hping3 "host2 ip-address" --syn --ack --flood -a 10.0.0.13`
 
 ## SSH daemon
-för att köra en ssh på en host skriver du ´sudo ~/mininet/examples/sshd.py´.
+för att köra en ssh på en host skriver du `sudo ~/mininet/examples/sshd.py`.
 
 nu kan du ssh från en annan terminal till en host `ssh "IP-adress"`
