@@ -17,7 +17,7 @@ skapa en ny gren `git checkout -b "tag"`.
 
 ladda ned python och andra verktyg för mininet `mininet/util/install.sh -a`.
 
-lägg till din linux distributiuon, den finns på topen när du ladar ner `mininet/util/install.sh -a "din linux distributiuon"`
+lägg till din linux distributiuon, den finns på topen när du ladar ner `mininet/util/install.sh -a "din linux distributiuon"`.
 
 ## Starta mininet
 
